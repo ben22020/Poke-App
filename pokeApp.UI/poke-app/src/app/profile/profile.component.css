@@ -1,0 +1,33 @@
+.userinfo {
+  margin: 10px;
+  color: rgb(250, 255, 202);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.699);
+  padding: 1cm;
+  border-radius: 15px;
+  font-size: 20px;
+}
+table {
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+td {
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 26px;
+  background-color: rgba(0, 0, 0, 0.699);
+}
+.switch-btn {
+  margin-left: 36px;
+  padding: 6px;
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.switch-btn:hover {
+  background-color: #555555;
+  color: white;
+}

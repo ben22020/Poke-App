@@ -1,0 +1,19 @@
+<body>
+
+  <div class="pgtitle" [hidden]="isShow">
+    <h1>Pokemon Trade History</h1>
+  </div>
+
+  <nav class="topnav">
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/tradesearch">Trade Search</a>
+    <a (click)="logout()">Log out</a>
+  </nav>
+  <div>
+    <ul class="gradient-list">
+      <li *ngFor="let trade of trades">
+        {{trade.offeredBy}} traded a {{trade.pokemon}} to {{trade.redeemedBy}}
+      </li>
+    </ul>
+  </div>
+</body>

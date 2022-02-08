@@ -1,0 +1,33 @@
+<body>
+  <div class="row" *ngFor="let user of dbUserInfo">
+
+    <!-- <nav class="topnav">
+      <a routerLink="/dashboard">Home</a>
+      <a (click)="toggle()">{{buttonName}}</a>
+    </nav> -->
+    <button class='switch-btn' (click)="toggle()">{{buttonName}}</button>
+    <button class='switch-btn' (click)="GetNewCard()" *ngIf="buttonName=='Profile'">Click to draw a card</button>
+    <div class="pgtitle" [hidden]="isShow">
+      <h1>My Pokemon Collection</h1>
+    </div>
+    <div class="userinfo" *ngIf="isShow; else collection">
+      <table>
+        <tr>
+          <td>User name: </td>
+          <td>{{ user.userName }}</td>
+        </tr>
+        <tr>
+          <td>Account #: </td>
+          <td>{{ user.userID }}</td>
+        </tr>
+        <tr>
+          <td>E-mail:</td>
+          <td> {{user.email}}</td>
+        </tr>
+      </table>
+    </div>
+    <ng-template #collection>
+      <app-collection [userCards]=userCards></app-collection>
+    </ng-template>
+  </div>
+</body>
